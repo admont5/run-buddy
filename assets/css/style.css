@@ -18,6 +18,14 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 header h1 {
@@ -25,6 +33,7 @@ header h1 {
   margin: 0;
   font-size: 36px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -34,6 +43,7 @@ header a {
 
 header nav {
   margin: 7px 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul {
@@ -49,6 +59,15 @@ header nav ul li a {
   font-weight: lighter;
   font-size: 1.55vw;
 }
+
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15 px;
+  text-shadow: none;
+}
+
+
 
 /* HEADER / NAVBAR STYLES END */
 
@@ -94,6 +113,12 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  background-attachment: fixed;
+  background-position: 80%;
+}
+
+.hero h2 {
+  text-shadow: 0 0 10px rgba(99, 58, 58, 0.5);
 }
 
 .hero-cta {
@@ -113,11 +138,13 @@ section {
 
 .hero-form {
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgba(252, 225, 56, 80);
   padding: 20px;
   color: #024e76;
   width: 40%;
   margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -136,6 +163,13 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px; 
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -148,7 +182,13 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
 } 
+
+.hero-form button:hover {
+  background-color: #39a6b2;
+}
+
 /* HERO STYLES END */
 
 
@@ -182,12 +222,16 @@ section {
   font-size: 20px;
   text-align: center;
 }
-/* WHAT YOU DO STYLES END */
+/* WHAT YOU DO STYLES END */f
 
 
 /* WHAT YOU DO STYLES START */
 .steps { 
   background: #fce138;
+}
+
+.step:nth-child(even) {
+  border-bottom: 1px solid #39a6b2;
 }
 
 .step {
@@ -329,7 +373,22 @@ section {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, .75);
 }
+
+.contact-form input:hover, .contact-form textarea:hover {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+  color: rgba(0,0,0,1)
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+  color: rgba(0,0,0,1)
+}
+
 
 .contact-form button {
   width: 100%;
@@ -339,11 +398,18 @@ section {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
 
 .contact-info a {
   color: #fce138;
 }
+
 
 
 /* REACH OUT STYLES END */
@@ -366,6 +432,7 @@ section {
   header {
   padding-bottom: 0;
   justify-content: center;
+  position: relative;
   }
 
   header h1 {
@@ -437,6 +504,8 @@ section {
     flex: 100%;  
   }
 }
+
+
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
